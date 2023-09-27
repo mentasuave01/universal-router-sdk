@@ -1,5 +1,5 @@
 {
-  "name": "@uniswap/universal-router-sdk",
+  "name": "@spookyswaptest/universal-router-sdk",
   "version": "1.5.7",
   "description": "sdk for integrating with the Universal Router contracts",
   "main": "dist/index.js",
@@ -51,19 +51,22 @@
   "dependencies": {
     "@uniswap/permit2-sdk": "^1.2.0",
     "@uniswap/router-sdk": "^1.6.0",
-    "@uniswap/sdk-core": "^4.0.0",
+    "@uniswap/sdk-core": "npm:@spookyswaptest/sdk-core@1.0.4",
     "@uniswap/universal-router": "1.4.3",
     "@uniswap/v2-sdk": "^3.2.0",
     "@uniswap/v3-sdk": "^3.10.0",
     "bignumber.js": "^9.0.2",
     "ethers": "^5.3.1"
   },
+  "resolutions": {
+    "**/@uniswap/sdk-core": "npm:@spookyswaptest/sdk-core@1.0.4"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Uniswap/universal-router-sdk.git"
+    "url": "git+https://github.com/RitzyDevBox/universal-router-sdk.git"
   },
   "bugs": {
-    "url": "https://github.com/Uniswap/universal-router-sdk/issues"
+    "url": "https://github.com/RitzyDevBox/universal-router-sdk/issues"
   },
-  "homepage": "https://github.com/Uniswap/universal-router-sdk#readme"
+  "homepage": "https://github.com/RitzyDevBox/universal-router-sdk#readme"
 }
