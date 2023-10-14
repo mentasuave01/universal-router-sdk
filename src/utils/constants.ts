@@ -1,3 +1,4 @@
+import { ChainId } from '@uniswap/sdk-core'
 import { BigNumber } from 'ethers'
 
 type ChainConfig = {
@@ -99,10 +100,10 @@ const CHAIN_CONFIGS: { [key: number]: ChainConfig } = {
     weth: '0x4200000000000000000000000000000000000006',
     creationBlock: 3229053,
   },
-  [199]: {
-    router: '0xFfD549f10A59d1563f758216ff5cDbc13E1031e6',
+  [ChainId.BIT_TORRENT_MAINNET]: {
+    router: '0xB27481AdC53077191b293f2BA1A589cc77802078',
     weth: '0x23181F21DEa5936e24163FFABa4Ea3B316B57f3C',
-    creationBlock: 27154253,
+    creationBlock: 28132160,
   }
 }
 
@@ -125,6 +126,7 @@ export const WETH_ADDRESS = (chainId: number): string => {
 }
 
 export const PERMIT2_ADDRESS = '0x000000000022D473030F116dDEE9F6B43aC78BA3'
+export const BTT_PERMIT2_ADDRESS = '0x41846bd0E41dD42D80d00E99212040C871F40CB0';
 
 export const CONTRACT_BALANCE = BigNumber.from(2).pow(255)
 export const ETH_ADDRESS = '0x0000000000000000000000000000000000000000'
