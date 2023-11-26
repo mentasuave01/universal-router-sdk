@@ -100,10 +100,23 @@ const CHAIN_CONFIGS: { [key: number]: ChainConfig } = {
     weth: '0x4200000000000000000000000000000000000006',
     creationBlock: 3229053,
   },
+  // bittorrent mainnet
   [ChainId.BIT_TORRENT_MAINNET]: {
     router: '0xB27481AdC53077191b293f2BA1A589cc77802078',
     weth: '0x23181F21DEa5936e24163FFABa4Ea3B316B57f3C',
     creationBlock: 28132160,
+  },
+   // fantom mainnet
+   [ChainId.FANTOM]: {
+    router: '0xF491e7B69E4244ad4002BC14e878a34207E38c29',
+    weth: '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83',
+    creationBlock: 4242185,
+  },
+   // Horizen mainnet
+   [ChainId.EON]: {
+    router: '0xa7B257019fc65Be804fd5A2Aa2AFe64cBC9E7d37',
+    weth: '0xF5cB8652a84329A2016A386206761f455bCEDab6',
+    creationBlock: 513162,
   }
 }
 
@@ -125,8 +138,11 @@ export const WETH_ADDRESS = (chainId: number): string => {
   return CHAIN_CONFIGS[chainId].weth
 }
 
+
 export const PERMIT2_ADDRESS = '0x000000000022D473030F116dDEE9F6B43aC78BA3'
 export const BTT_PERMIT2_ADDRESS = '0x41846bd0E41dD42D80d00E99212040C871F40CB0';
+ export const FTM_PERMIT2_ADDRESS = '0x838c010F57889195C88f2097488e49B7ad04EcB1';
+ export const EOS_PERMIT2_ADDRESS = '0xd119eF12fdC22756c8Ce4F03E463607742e3A59f';
 
 export const CONTRACT_BALANCE = BigNumber.from(2).pow(255)
 export const ETH_ADDRESS = '0x0000000000000000000000000000000000000000'
