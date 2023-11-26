@@ -2203,10 +2203,10 @@
     "@uniswap/v2-sdk" "^3.2.0"
     "@uniswap/v3-sdk" "^3.10.0"
 
-"@uniswap/sdk-core@^4", "@uniswap/sdk-core@^4.0.2", "@uniswap/sdk-core@npm:@spookyswaptest-er/sdk-core@2.0.1", "@uniswap/sdk-core@npm:@spookyswaptest-er/sdk-core@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@spookyswaptest-er/sdk-core/-/sdk-core-2.0.1.tgz#9f2e7a77106f6c0581db1530274c8de6a08f6b83"
-  integrity sha512-XxvtpE6jq0fwS8P+qq4fvsXjlb9sekQW2meXeRSo0BZmkEI5vuKGdtSvrnYZqxjTbR73v9w9bRrQ2YvnBLxINw==
+"@uniswap/sdk-core@^4", "@uniswap/sdk-core@^4.0.7", "@uniswap/sdk-core@npm:@spookyswaptest/sdk-core@1.0.11", "@uniswap/sdk-core@npm:@spookyswaptest/sdk-core@^1.0.11":
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/@spookyswaptest/sdk-core/-/sdk-core-1.0.11.tgz#fe5a5bad5ed64a52f3cc0d93d820121382d08499"
+  integrity sha512-2yOOF1B+ZMFvMoo01W+kuaCCvzQ5hmlmrvjK5QkDpn4b0KkZQuKiTyLyI8EsP8NTC4ceqUej5cHnDtImXSFGGg==
   dependencies:
     "@ethersproject/address" "^5.0.2"
     big.js "^5.2.2"
@@ -2253,13 +2253,13 @@
   integrity sha512-MtybtkUPSyysqLY2U210NBDeCHX+ltHt3oADGdjqoThZaFRDKwM6k1Nb3F0A3hk5hwuQvytFWhrWHOEq6nVJ8Q==
 
 "@uniswap/v2-sdk@^3.2.0":
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/@uniswap/v2-sdk/-/v2-sdk-3.2.0.tgz#2b872cb83ac60ba66dc1d11acd7795b67ca8ceb1"
-  integrity sha512-kBOJ6Iwtgb/2LckLMIzfbPM37/ll0F+33lzPmZlqoJwsT0F2hZdVfAhclufZcSb0Y9RdLXl6372CZJ+lhx8cUQ==
+  version "3.2.3"
+  resolved "https://registry.yarnpkg.com/@uniswap/v2-sdk/-/v2-sdk-3.2.3.tgz#66a27e420fa1a1847365b2003f4776b745eb26cd"
+  integrity sha512-MEGNfd8hAvelDpXhKkgyKUycXVDWkabSUGg0VZvLB+WGtJ8c6wz44K/fABKfn00npWCAztUyIToEn7NlZSxEkg==
   dependencies:
     "@ethersproject/address" "^5.0.0"
     "@ethersproject/solidity" "^5.0.0"
-    "@uniswap/sdk-core" "^4.0.2"
+    "@uniswap/sdk-core" "^4.0.7"
     tiny-invariant "^1.1.0"
     tiny-warning "^1.0.3"
 
