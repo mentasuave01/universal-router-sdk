@@ -1,6 +1,6 @@
 {
   "name": "@spookyswaptest-er/universal-router-sdk",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "sdk for integrating with the Universal Router contracts",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -18,7 +18,7 @@
     "test:hardhat": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' hardhat test",
     "test:forge": "forge test",
     "install:ur": "cd node_modules/@uniswap/universal-router && forge install",
-    "build": "tsdx build",
+    "build": "dts build",
     "prettier:fix": "prettier --write '**/*.ts' && prettier --write '**/*.json'",
     "forge:fix": "forge fmt",
     "lint:fix": "yarn prettier:fix && yarn forge:fix",
@@ -34,32 +34,34 @@
   },
   "devDependencies": {
     "@types/chai": "^4.2.18",
-    "@types/mocha": "^8.2.2",
+    "@types/mocha": "^10.0.6",
     "@types/node": "^15.12.2",
     "@types/node-fetch": "^2.6.2",
     "chai": "^4.3.4",
     "dotenv": "^16.0.3",
+    "dts-cli": "^2.0.3",
     "eslint-plugin-prettier": "^3.4.0",
     "hardhat": "^2.6.8",
     "prettier": "^2.3.1",
     "ts-node": "^10.0.0",
-    "tsdx": "^0.14.1",
     "tslib": "^2.3.0",
     "typedoc": "^0.21.2",
-    "typescript": "^4.3.3"
+    "typescript": "^4.3.3",
+    "yarn-audit-fix": "^10.0.7"
   },
   "dependencies": {
     "@uniswap/permit2-sdk": "^1.2.0",
     "@uniswap/router-sdk": "^1.6.0",
-    "@uniswap/sdk-core": "npm:@spookyswaptest-er/sdk-core@2.0.1",
+    "@uniswap/sdk-core": "npm:@spookyswaptest-er/sdk-core@2.0.2",
     "@uniswap/universal-router": "1.4.3",
-    "@uniswap/v2-sdk": "^3.2.0",
+    "@uniswap/v2-sdk": "npm:@spookyswaptest-er/v2-sdk@^1.0.3",
     "@uniswap/v3-sdk": "^3.10.0",
     "bignumber.js": "^9.0.2",
     "ethers": "^5.3.1"
   },
   "resolutions": {
-    "**/@uniswap/sdk-core": "npm:@spookyswaptest-er/sdk-core@^2.0.1"
+    "**/@uniswap/sdk-core": "npm:@spookyswaptest-er/sdk-core@^2.0.2",
+    "@openzeppelin/contracts": "4.9.3"
   },
   "repository": {
     "type": "git",

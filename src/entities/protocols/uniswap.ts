@@ -31,6 +31,7 @@ export type SwapOptions = Omit<RouterSwapOptions, 'inputTokenPermit'> & {
 const REFUND_ETH_PRICE_IMPACT_THRESHOLD = new Percent(50, 100)
 
 interface Swap<TInput extends Currency, TOutput extends Currency> {
+  //@ts-ignore
   route: IRoute<TInput, TOutput, Pair | Pool>
   inputAmount: CurrencyAmount<TInput>
   outputAmount: CurrencyAmount<TOutput>
@@ -71,12 +72,15 @@ export class UniswapTrade implements Command {
     for (const swap of this.trade.swaps) {
       switch (swap.route.protocol) {
         case Protocol.V2:
+          //@ts-ignore
           addV2Swap(planner, swap, this.trade.tradeType, this.options, payerIsUser, routerMustCustody)
           break
         case Protocol.V3:
+          //@ts-ignore
           addV3Swap(planner, swap, this.trade.tradeType, this.options, payerIsUser, routerMustCustody)
           break
         case Protocol.MIXED:
+          //@ts-ignore
           addMixedSwap(planner, swap, this.trade.tradeType, this.options, payerIsUser, routerMustCustody)
           break
         default:
@@ -138,6 +142,7 @@ function addV2Swap<TInput extends Currency, TOutput extends Currency>(
   routerMustCustody: boolean
 ): void {
   const trade = new V2Trade(
+    //@ts-ignore
     route as RouteV2<TInput, TOutput>,
     tradeType == TradeType.EXACT_INPUT ? inputAmount : outputAmount,
     tradeType
@@ -267,6 +272,7 @@ function addMixedSwap<TInput extends Currency, TOutput extends Currency>(
       planner.addCommand(CommandType.V3_SWAP_EXACT_IN, [
         // if not last section: send tokens directly to the first v2 pair of the next section
         // note: because of the partitioning function we can be sure that the next section is v2
+        //@ts-ignore
         isLastSectionInRoute(i) ? tradeRecipient : (sections[i + 1][0] as Pair).liquidityToken.address,
         i == 0 ? amountIn : CONTRACT_BALANCE, // amountIn
         !isLastSectionInRoute(i) ? 0 : amountOut, // amountOut

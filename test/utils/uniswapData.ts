@@ -137,6 +137,7 @@ export function buildTrade(
   )[]
 ): RouterTrade<Currency, Currency, TradeType> {
   return new RouterTrade({
+    //@ts-ignore
     v2Routes: trades
       .filter((trade) => trade instanceof V2Trade)
       .map((trade) => ({

@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "rootDir": "src",
     "target": "es2018",
     "module": "esnext",
     "moduleResolution": "node",
@@ -11,8 +12,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "lib": ["esnext.string"],
-    "typeRoots": ["./typechain", "./node_modules/@types"],
-    "types": ["@types/mocha", "node"]
+    "typeRoots": ["./typechain", "./node_modules/@types"]
   },
-  "include": ["src", "test"]
+  "include": ["src"],
+  "exclude": ["test"]
 }
